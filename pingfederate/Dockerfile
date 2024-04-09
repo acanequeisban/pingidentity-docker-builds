@@ -23,6 +23,10 @@ ARG SHIM_TAG
 
 #################################################################################
 
+RUN apk add --no-cache bash
+
+#################################################################################
+
 FROM ${REGISTRY}/pingcommon:${GIT_TAG}-${ARCH} as common
 FROM ${REGISTRY}/pingjvm:${JVM}-${SHIM_TAG}-${GIT_TAG}-${ARCH} as jvm
 
